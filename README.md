@@ -1,12 +1,15 @@
 # Psychometric Analysis Toolkit
 
-Collection of R scripts for confirmatory factor analysis and scale validation in educational psychology research.
+Comprehensive R scripts for confirmatory factor analysis and scale validation in educational psychology research.
 
-## Features
-- Confirmatory Factor Analysis (CFA) with lavaan
-- Factor score extraction
-- Reliability analysis
-- Model modification indices
+## Contents
+
+- **Confirmatory Factor Analysis (CFA)**: Multi-factor models with lavaan
+- **Scale Validation**: Reliability analysis and factor structure assessment
+- **Factor Score Extraction**: Computing latent variable scores
+- **Model Refinement**: Modification indices and correlated errors
 
 ## Requirements
-- R packages: lavaan, dplyr, haven, semTools
+
+```r
+install.packages(c("lavaan", "dplyr", "haven", "semTools"))

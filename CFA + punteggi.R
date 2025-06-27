@@ -61,21 +61,21 @@ summary(fit_engagement, fit.measures = TRUE)
 # F4: Secondary dimension (5 items)
 
 burnout <- '
-  # Factor 1: Core exhaustion symptoms
-  F1 =~ Q13_burnout_1 + Q13_burnout_2 + Q13_burnout_3 + Q13_burnout_7 + 
+# Factor 1: Emotional exhaustion 
+F1 =~ Q13_burnout_1 + Q13_burnout_2 + Q13_burnout_3 + Q13_burnout_7 + 
         Q13_burnout_9 + Q13_burnout_15 + Q13_burnout_16 + Q13_burnout_18 + 
         Q13_burnout_24
   
-  # Factor 2: Interpersonal strain
-  F2 =~ Q13_burnout_6 + Q13_burnout_11 + Q13_burnout_12 + Q13_burnout_17 + 
+# Factor 2: Depersonalization
+F2 =~ Q13_burnout_6 + Q13_burnout_11 + Q13_burnout_12 + Q13_burnout_17 + 
         Q13_burnout_27
   
-  # Factor 3: Reduced efficacy
-  F3 =~ Q13_burnout_4 + Q13_burnout_8 + Q13_burnout_10 + Q13_burnout_13 + 
+# Factor 3: PRealization
+F3 =~ Q13_burnout_4 + Q13_burnout_8 + Q13_burnout_10 + Q13_burnout_13 + 
         Q13_burnout_20 + Q13_burnout_21 + Q13_burnout_23 + Q13_burnout_25
   
-  # Factor 4: Additional burnout dimension
-  F4 =~ Q13_burnout_5 + Q13_burnout_14 + Q13_burnout_19 + Q13_burnout_22 + 
+# Factor 4: Cynism
+F4 =~ Q13_burnout_5 + Q13_burnout_14 + Q13_burnout_19 + Q13_burnout_22 + 
         Q13_burnout_26
 '
 
@@ -88,15 +88,15 @@ summary(fit_burnout, fit.measures = TRUE)
 # Three dimensions of teacher role perception
 
 triq <- '
-  # F1: Professional identity (5 items)
+  # F1: Promotion Role
   F1 =~ Q16_ruolopercepito_10 + Q16_ruolopercepito_11 + Q16_ruolopercepito_12 + 
         Q16_ruolopercepito_17 + Q16_ruolopercepito_18
   
-  # F2: Teaching commitment (5 items)
+  # F2: Pedagogical Role (5 items)
   F2 =~ Q16_ruolopercepito_1 + Q16_ruolopercepito_2 + Q16_ruolopercepito_4 + 
         Q16_ruolopercepito_6 + Q16_ruolopercepito_7
   
-  # F3: Role satisfaction (3 items)
+  # F3: Traditional Role (3 items)
   F3 =~ Q16_ruolopercepito_5 + Q16_ruolopercepito_8 + Q16_ruolopercepito_15
 '
 
@@ -109,12 +109,12 @@ summary(fit_TRIQ, fit.measures = TRUE)
 # Two-factor structure distinguishing methodology types
 
 metattive <- '
-  # F1: Student-centered methods (7 items)
+  # F1: Cooperative Learning (7 items)
   F1 =~ Q19_metodolattive_1 + Q19_metodolattive_2 + Q19_metodolattive_4 + 
         Q19_metodolattive_5 + Q19_metodolattive_6 + Q19_metodolattive_7 + 
         Q19_metodolattive_8
   
-  # F2: Collaborative methods (4 items)
+  # F2: Metacognitive strategies (4 items)
   F2 =~ Q19_metodolattive_3 + Q19_metodolattive_9 + Q19_metodolattive_10 + 
         Q19_metodolattive_11
 '
@@ -167,11 +167,11 @@ F_selfeff_df <- as.data.frame(F_selfeff)
 
 # Assign meaningful column names
 colnames(F_engagement_df) <- "Engagement_Factor"
-colnames(F_burnout_df) <- c("Burnout_Exhaustion", "Burnout_Cynicism", 
-                            "Burnout_Inefficacy", "Burnout_Secondary")
-colnames(F_triq_df) <- c("TRIQ_Professional_Identity", "TRIQ_Teaching_Commitment", 
-                         "TRIQ_Role_Satisfaction")
-colnames(F_metatt_df) <- c("Methods_Student_Centered", "Methods_Collaborative")
+colnames(F_burnout_df) <- c("BurnoutEE", "Burnout_CY", 
+                            "Burnout_RP", "Burnout_DEP")
+colnames(F_triq_df) <- c("TRIQ_Prom", "TRIQ_Ped", 
+                         "TRIQ_Trad")
+colnames(F_metatt_df) <- c("CoopLea", "Metacognitive")
 colnames(F_selfeff_df) <- "Teacher_Self_Efficacy"
 
 # Merge factor scores with original dataset

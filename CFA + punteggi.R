@@ -182,13 +182,3 @@ HBSC_LPA <- cbind(HBSC_LPA,
                   F_metatt_df,
                   F_selfeff_df)
 
-# ==============================================================================
-# MODEL DIAGNOSTICS SUMMARY
-# ==============================================================================
-# Key fit indices to evaluate:
-# - CFI/TLI > .95 (good fit)
-# - RMSEA < .06 (good fit)
-# - SRMR < .08 (good fit)
-# 
-# Note: Correlated residuals indicate shared method variance or content overlap
-# beyond the primary factor structure. These should be theoretically justified.

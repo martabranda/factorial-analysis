@@ -1,8 +1,3 @@
-
-# ==============================================================================
-# SETUP AND DATA PREPARATION
-# ==============================================================================
-
 # Load required packages
 library(lavaan)    # For confirmatory factor analysis
 library(dplyr)     # For data manipulation
